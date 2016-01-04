@@ -17,54 +17,54 @@
 			"@type": "@id"
 		},
 		"prot": {
-			"@id": "http://www.schneider-electric.com/global/Protocols#",
+			"@id": "http://www.myontology/global/Protocols#",
 			"@type": "@id"
 		},
 		"boc": {
-			"@id": "http://www.schneider-electric.com/Clients/BoC#",
+			"@id": "http://www.myontology/Clients/BoC#",
 			"@type": "@id"
 		},
 		"hasName": "qt:hasName",
 		"hasLocation_Building": "loc:hasLocation_Building",
 		"loc": {
-			"@id": "http://www.schneider-electric.com/global/CoreSE_Location#",
+			"@id": "http://www.myontology/global/CoreSE_Location#",
 			"@type": "@id"
 		},
 		"hasLocation_Room": "loc:hasLocation_Room",
 		"hasLocation_Floor": "loc:hasLocation_Floor",
 		"qt": {
-			"@id": "http://www.schneider-electric.com/global/CoreSE_Quantity#",
+			"@id": "http://www.myontology/global/CoreSE_Quantity#",
 			"@type": "@id"
 		},
 		"buildingBU": {
-			"@id": "http://www.schneider-electric.com/builidings/BDevices#",
+			"@id": "http://www.myontology/builidings/BDevices#",
 			"@type": "@id"
 		},
 		"ews": {
-			"@id": "http://www.schneider-electric.com/global/EWS#",
+			"@id": "http://www.myontology/global/EWS#",
 			"@type": "@id"
 		}
 	},
 	"@graph": [{
 		"@type": "owl:ontology",
-		"@id": "http://www.schneider-electric.com/Clients/BoC#",
+		"@id": "http://www.myontology/Clients/BoC#",
 		"owl:imports": [{
-			"@id": "http://www.schneider-electric.com/global/CoreSE_Location#"
+			"@id": "http://www.myontology/global/CoreSE_Location#"
 		},
 		{
-			"@id": "http://www.schneider-electric.com/builidings/BDevices#"
+			"@id": "http://www.myontology/builidings/BDevices#"
 		},
 		{
-			"@id": "http://www.schneider-electric.com/global/CoreSE_Quantity#"
+			"@id": "http://www.myontology/global/CoreSE_Quantity#"
 		},
 		{
-			"@id": "http://www.schneider-electric.com/global/EWS#"
+			"@id": "http://www.myontology/global/EWS#"
 		},
 		{
-			"@id": "http://www.schneider-electric.com/global/Protocols#"
+			"@id": "http://www.myontology/global/Protocols#"
 		}],
 		"owl:versionIRI": {
-			"@id": "http://www.schneider-electric.com/Clients/BoC/0.0.1"
+			"@id": "http://www.myontology/Clients/BoC/0.0.1"
 		}
 	},
 	{
