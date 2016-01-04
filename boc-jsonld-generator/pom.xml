@@ -15,7 +15,6 @@
 			<groupId>com.io-informatics.oss</groupId>
 			<artifactId>jackson-jsonld</artifactId>
 			<version>0.0.6-SNAPSHOT-SE-PATCHED</version>
-			<!-- This version is pateched -->
 		</dependency>
 	</dependencies>
 	<build>
@@ -27,6 +26,28 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<archive>
+						<manifest>
+							<mainClass>semanticstore.jsonld.Boc_Jsonld_Generator</mainClass>
+							<!-- <addClasspath>true</addClasspath> -->
+						</manifest>
+					</archive>
 				</configuration>
 			</plugin>
 		</plugins>
