@@ -24,6 +24,7 @@ public class JsonldModule extends SimpleModule {
      */
     public JsonldModule(Supplier<Object> contextSupplier){
         setNamingStrategy(new JsonldPropertyNamingStrategy());
+       // setNamingStrategy(new JsonldPropertyTypeNamingStrategy());
         setDeserializerModifier(new JsonldBeanDeserializerModifier(contextSupplier));
         setSerializerModifier(new JsonldResourceSerializerModifier());
     }

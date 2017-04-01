@@ -6,8 +6,8 @@ import java.util.function.Function;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldPropertyType;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldType;
-import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldType2;
 
 /**
  * @author Alexander De Leon
@@ -19,7 +19,7 @@ public class JsonldResourceBuilder<T> {
 	private String _id;
 	private Function<T, String> _idSupplier;
 
-	JsonldResourceBuilder(){
+	public JsonldResourceBuilder(){
 	}
 
 	public JsonldResourceBuilder<T> context(String context){
@@ -59,23 +59,26 @@ public class JsonldResourceBuilder<T> {
 		return JsonldContextFactory.multiContext(Optional.ofNullable(_context), JsonldContextFactory.fromAnnotations(scopedObj));
 	}
 
-	protected String getId(T scopedObj){
+	public String getId(T scopedObj){
 		return Optional.ofNullable(_id).orElse(Optional.ofNullable(_idSupplier).map(f -> f.apply(scopedObj)).orElse(null));
 	}
 
-	protected String getType(T scopedObj) {
+	public String getType(T scopedObj) {
 		return Optional.ofNullable(_type).orElse(dynamicTypeLookup(scopedObj.getClass()));
 	}
 
 	static String dynamicTypeLookup(Class<?> objType){
-		JsonldType type = objType.getAnnotation(JsonldType.class);
-		return type == null? null : type.value();
+		if( objType.isInstance(JsonldType.class) )
+		{
+			JsonldType type = objType.getAnnotation(JsonldType.class);
+			return type == null? null : type.value();
+		}
+		else if( objType.isInstance(JsonldPropertyType.class) )
+		{
+			JsonldPropertyType type = objType.getAnnotation(JsonldPropertyType.class);
+			return type == null? null : type.id();
+		}
+		return null;
 	}
-	
 
-
-	static String[] dynamicType2Lookup(Class<?> objType){
-		JsonldType2 type = objType.getAnnotation(JsonldType2.class);
-		return type == null? null : type.value2();
-	}
 }
