@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldId;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldProperty;
 import semanticstore.jsonld.protocols.Protocol;
-import semanticstore.util.jsonld.NS;
+import semanticstore.jsonld.util.NS;
 
 public class B3866 extends BuildingsBUItem {
 

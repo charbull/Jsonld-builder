@@ -14,8 +14,8 @@ import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldId;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldLink;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldProperty;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldType;
-import semanticstore.util.jsonld.NS;
-import semanticstore.util.jsonld.RefId;
+import semanticstore.jsonld.util.NS;
+import semanticstore.jsonld.util.RefId;
 
 @JsonldLink(name = NS.EWS_NS, rel = NS.EWS_URL)
 @JsonldType(NS.timeseries)

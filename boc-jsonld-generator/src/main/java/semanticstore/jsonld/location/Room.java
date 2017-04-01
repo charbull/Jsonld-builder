@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldId;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldProperty;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldType;
-import semanticstore.util.jsonld.NS;
+import semanticstore.jsonld.util.NS;
 
 @JsonldType(NS.room)
 public class Room extends Location {

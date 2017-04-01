@@ -17,12 +17,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldId;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldLink;
-import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldProperty;
-import semanticstore.util.jsonld.NS;
-import semanticstore.util.jsonld.RefId;
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldPropertyType;
+import semanticstore.jsonld.util.NS;
+import semanticstore.jsonld.util.RefId;
 
 @JsonldLink(name = NS.QT_NS, rel = NS.QT_URL)
 @JsonldLink(name = NS.BDEVICES_NS, rel = NS.BDEVICES_URL)
+//@JsonldLink(rel = "owl:DatatypeProperty", name ="rdfs:Datatype")
 
 public class BuildingsBUItem {
 
@@ -157,9 +158,20 @@ public class BuildingsBUItem {
 		relations.put(NS.hasCommunicationMedium, ll);
 	}
 	
-	@JsonldProperty(NS.hasName)
-	@JsonInclude(Include.NON_NULL)
+	
+	//TODO:These three annotations are important
+	@JsonInclude(Include.NON_EMPTY)
+	@JsonldPropertyType(id = NS.hasName, type = "owl:DatatypeProperty")
+	@JsonProperty(NS.hasName)
 	public String hasName;
+	/*
+	 *  {
+      "@id": "loc:hasName",
+      "@type": "owl:DatatypeProperty"
+    },
+	 * 
+	 * */
+	
 	
 	@JsonIgnore
 	public RefId getRefId()

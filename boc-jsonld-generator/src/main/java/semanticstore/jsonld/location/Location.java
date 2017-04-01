@@ -15,8 +15,8 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldId;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldLink;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldProperty;
-import semanticstore.util.jsonld.NS;
-import semanticstore.util.jsonld.RefId;
+import semanticstore.jsonld.util.NS;
+import semanticstore.jsonld.util.RefId;
 
 @JsonldLink(name = NS.LOC_NS, rel = NS.LOC_URL)
 public abstract class Location {

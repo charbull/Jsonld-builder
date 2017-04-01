@@ -11,8 +11,8 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldId;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldProperty;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldType;
-import semanticstore.util.jsonld.NS;
-import semanticstore.util.jsonld.RefId;
+import semanticstore.jsonld.util.NS;
+import semanticstore.jsonld.util.RefId;
 
 @JsonldType(NS.site)
 public class Site extends Location {

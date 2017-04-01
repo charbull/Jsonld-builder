@@ -13,9 +13,9 @@ import semanticstore.jsonld.location.Room;
 import semanticstore.jsonld.location.Site;
 import semanticstore.jsonld.timeseries.EWSType;
 import semanticstore.jsonld.timeseries.TimeSeries;
-import semanticstore.util.jsonld.NS;
-import semanticstore.util.jsonld.RefId;
-import semanticstore.util.jsonld.Topology;
+import semanticstore.jsonld.util.NS;
+import semanticstore.jsonld.util.RefId;
+import semanticstore.jsonld.util.Topology;
 
 public class Topology_Instantiator {
 
@@ -51,7 +51,7 @@ public class Topology_Instantiator {
 		B3866 hp_1_1_18 = new B3866("HP-1_1.18", "HP-1_1.18");
 		hp_1_1_18.hasPhysicalLocation(R123.getRefId());
 		hp_1_1_18.hasMonitoringLocation(R456.getRefId());
-		TimeSeries ts_6549 = new TimeSeries("6549-fsdf-fsdfs13", null, new RefId(NS.EWS_NS+":Temperature"), new RefId(NS.QT_NS+":°F"));
+		TimeSeries ts_6549 = new TimeSeries("6549-fsdf-fsdfs13", null, new RefId(NS.EWS_NS+":Temperature"), new RefId(NS.QT_NS+":ï¿½F"));
 		hp_1_1_18.hasTimeSeries(ts_6549.getRefId());
 
 		BuildingsBUItem enterpriseServer = new BuildingsBUItem("server_1", "EServer", "EnterpriseServer");

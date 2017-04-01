@@ -8,8 +8,8 @@ package semanticstore.jsonld.timeseries;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldId;
-import semanticstore.util.jsonld.NS;
-import semanticstore.util.jsonld.RefId;
+import semanticstore.jsonld.util.NS;
+import semanticstore.jsonld.util.RefId;
 
 public class EWSType {
 
