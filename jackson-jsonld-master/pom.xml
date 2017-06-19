@@ -25,6 +25,14 @@
                 <role>committer</role>
             </roles>
         </developer>
+		<developer>
+            <name>Charbel El Kaed</name>
+            <email>charbel.kaed@outlook.com</email>
+            <timezone>US/EST</timezone>
+            <roles>
+                <role>contributer</role>
+            </roles>
+        </developer>
     </developers>
 
     <properties>
