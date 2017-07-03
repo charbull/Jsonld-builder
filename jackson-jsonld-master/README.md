@@ -1,6 +1,9 @@
 # jackson-jsonld [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://www.opensource.org/licenses/MIT) [![Build Status](https://travis-ci.org/io-informatics/jackson-jsonld.svg)](https://travis-ci.org/io-informatics/jackson-jsonld) [![Join the chat at https://gitter.im/io-informatics/jackson-jsonld](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/io-informatics/jackson-jsonld?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-JSON-LD Module for Jackson
+JSON-LD Module for Jackson, this is a patched version
+
+## Clone it and install it
+`mvn clean install`
 
 ## Install it
 If you use maven, just add the dependency to your pom.xml
@@ -8,7 +11,7 @@ If you use maven, just add the dependency to your pom.xml
 <dependency>
     <groupId>com.io-informatics.oss</groupId>
     <artifactId>jackson-jsonld</artifactId>
-    <version>0.0.5</version>
+    <version>0.0.6-SNAPSHOT-SE-PATCHED</version>
 </dependency>
 ```
 
